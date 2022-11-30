@@ -101,14 +101,13 @@ int main()
 
 //END Code 05 print Fahrenheit-Celsius table. for statement.Symbolic constant */
 
-/* Code 06  copy input to output;1st version   */
+/* Code 06  copy input to output;1st version
 
 int main()
 {
     int c;
-
     c=getchar( );
-    while(c!=EOF)
+    while(c!='\t')
         {
             putchar(c);
             c=getchar( );
@@ -116,4 +115,19 @@ int main()
         }
 }
 
-//END Code 05 copy input to output;1st version
+//END Code 06 copy input to output;1st version    */
+
+/* Code 07 count lines in input */
+
+int main()
+{
+    int c,nl;
+
+    nl = 0 ;
+    while((c=getchar( ))!='\t')
+         if(c == '\n')
+               ++nl;
+printf("%d line(s)\n",nl);
+}
+
+//END Code 07 copy input to output;1st version
