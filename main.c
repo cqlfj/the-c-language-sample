@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 
-
 /*Code 01 Hello World.
 int main()
 
@@ -117,8 +116,8 @@ int main()
 
 //END Code 06 copy input to output;1st version    */
 
-/* Code 07 count lines in input */
 
+/*   Code 07 copy input to output;1st version
 int main()
 {
     int c,nl;
@@ -130,4 +129,44 @@ int main()
 printf("%d line(s)\n",nl);
 }
 
-//END Code git test .07 copy input to output;1st version
+END. Code 07 copy input to output;1st version */
+
+
+
+/* Code 08 count lines, words, and characters in input */
+
+#define IN	1	//inside word
+
+#define OUT	0	// outside word
+
+
+main()
+
+{
+
+	int c, nl, nw, nc, state;
+	state = OUT;
+	nl = nw = nc = 0;
+	while ((c = getchar()) != '\t'){
+		++nc;
+		if (c == '\n')
+			++nl;
+		if (c == ' ' ||c == '\n' || c  == '\t')
+			state = OUT;
+		else if (state == OUT) {
+			state = IN;
+			++nw;
+		}
+	}
+	printf("%d %d %d\n",nl, nw, nc);
+
+}
+
+
+
+
+
+
+
+
+
